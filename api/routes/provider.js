@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Provider = require("../../models/Provider");
+const Provider = require("../../models/provider");
 // GET all providers
 router.get('/', async (req, res) => {
     try {

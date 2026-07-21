@@ -5,7 +5,6 @@ app.use(express.json());
 
 const testRouter = require("./api/test");
 const sequelize = require("./config/database");
-
 // Models
 require("./models/User");
 require("./models/Price");
@@ -21,8 +20,7 @@ app.use("/api/test", testRouter);
 app.use("/api/prices", pricesRouter);
 app.use("/api/providers", providerRouter);
 app.use('/api/items', itemRoutes);
-const PORT = 3000;
-
+const PORT = process.env.PORT || 3000;
 // Database connection
 sequelize.authenticate()
   .then(() => console.log("✅ Database connected successfully!"))
