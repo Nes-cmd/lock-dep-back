@@ -9,18 +9,18 @@ const sequelize = require("./config/database");
 // Models
 require("./models/User");
 require("./models/Price");
-require("./models/Provider");
-
+require("./models/provider");
+require("./models/Item");
 // Routes
 const authRoutes = require("./api/routes/auth.routes");
 const pricesRouter = require("./api/prices");
 const providerRouter = require("./api/routes/provider");
-
+const itemRoutes = require('./api/routes/Item');
 app.use("/api/auth", authRoutes);
 app.use("/api/test", testRouter);
 app.use("/api/prices", pricesRouter);
 app.use("/api/providers", providerRouter);
-
+app.use('/api/items', itemRoutes);
 const PORT = 3000;
 
 // Database connection
