@@ -15,11 +15,14 @@ const authRoutes = require("./api/routes/auth.routes");
 const pricesRouter = require("./api/prices");
 const providerRouter = require("./api/routes/Provider");
 const itemRoutes = require('./api/routes/Item');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger-output.json');
 app.use("/api/auth", authRoutes);
 app.use("/api/test", testRouter);
 app.use("/api/prices", pricesRouter);
 app.use("/api/providers", providerRouter);
 app.use('/api/items', itemRoutes);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 const PORT = process.env.PORT || 3000;
 // Database connection
 sequelize.authenticate()
