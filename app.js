@@ -13,7 +13,7 @@ require("./models/Item");
 // Routes
 const authRoutes = require("./api/routes/auth.routes");
 const pricesRouter = require("./api/prices");
-const providerRouter = require("./api/routes/provider");
+const providerRouter = require("./api/routes/Provider");
 const itemRoutes = require('./api/routes/Item');
 app.use("/api/auth", authRoutes);
 app.use("/api/test", testRouter);
