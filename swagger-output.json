@@ -6,7 +6,6 @@
     "version": "1.0.0"
   },
   "host": "team1-api.primetrustx.com",
-  "basePath": "/",
   "schemes": [
     "https"
   ],
