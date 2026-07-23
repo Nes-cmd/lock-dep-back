@@ -32,8 +32,6 @@ const pricesRouter = require("./api/prices");
 const providerRouter = require("./api/routes/Provider");
 const itemRoutes = require("./api/routes/Item");
 
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger-output.json');
 
 app.use("/api/auth", authRoutes);
 app.use("/api/test", testRouter);
