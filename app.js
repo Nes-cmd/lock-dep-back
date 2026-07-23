@@ -1,5 +1,8 @@
 const express = require("express");
 const cors = require("cors");
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger-output.json");
+
 const app = express();
 
 // CORS Configuration (ከማንኛውም Origin ጥያቄዎችን ይቀበላል)
@@ -17,6 +20,7 @@ const testRouter = require("./api/test");
 const sequelize = require("./config/database");
 
 // Models
+
 require("./models/User");
 require("./models/Price");
 require("./models/provider");
