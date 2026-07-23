@@ -5,8 +5,8 @@ const doc = {
     title: 'Lock Dep API',
     description: 'Backend API Documentation for Frontend Team',
   },
-  host: 'localhost:3000', 
-  schemes: ['http', 'https'],
+host: 'team1-api.primetrustx.com',
+  schemes: ['https'],
 };
 
 const outputFile = './swagger-output.json';
