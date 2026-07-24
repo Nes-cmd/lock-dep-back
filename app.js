@@ -3,6 +3,9 @@ const cors = require("cors");
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger-output.json");
 
+swaggerDocument.host = "team1-api.primetrustx.com";
+swaggerDocument.schemes = ["https"];
+
 const app = express();
 
 // CORS Configuration (ከማንኛውም Origin ጥያቄዎችን ይቀበላል)
